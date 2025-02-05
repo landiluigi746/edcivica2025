@@ -1,13 +1,23 @@
-#body {
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(to bottom right, #525252, #323333);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-#page-content{
+#page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra il contenuto orizzontalmente */
+    justify-content: flex-start; /* Mantiene il contenuto in cima */
     max-width: 100%;
     margin: 0 auto;
+    padding-top: 50px; /* Distanza dalla parte superiore per il titolo */
 }
 
 #project-title {
@@ -18,33 +28,38 @@
     border-radius: 10px;
     display: inline-block;
     box-shadow: 0 0 10px rgba(158, 197, 171, 0.6), 0 0 15px rgba(158, 197, 171, 0.4);
+    margin-bottom: 20px; /* Distanza tra il titolo e il contenuto */
+    text-align: center; /* Centra il titolo rispetto alla larghezza */
 }
 
-
-#project-description{
-        color:black;
-        font-style: italic;
-        font-size:30px;
+#project-description {
+    color: black;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
 }
 
-/*#project-embed-container{
-
+#project-embed-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 100px auto; 
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
-*/
+
+#project-embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     background-image: linear-gradient(to bottom right, #242424, #222222);
-    background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
-    padding:40px;
-    margin-bottom: auto;
+    padding: 20px;
     color: white;
-}
-
-#footer-parameter{
-    padding: 1px;
 }
