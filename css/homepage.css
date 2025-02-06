@@ -1,0 +1,84 @@
+/* */
+#navbar {
+    background-color: lightgray;
+    padding: 13px 0;
+    position: sticky;
+    top: 20px;
+    max-width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px 6px rgb(64, 64, 64);
+}
+
+#navbar > a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+#navbar > a:hover {
+    color: blue;
+    transform: scale(1.2);
+}
+
+/* inizio miracoli divini */
+#home, #projects-section, #about {
+    margin: 15% 0;
+}
+
+#home {
+    transform: scale(2.0);
+    transition: transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+    padding: 10px;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px 8px lightgray;
+    transition: box-shadow 0.45s ease-in-out, transform 0.45s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.10);
+    box-shadow: 4px 4px 8px 8px darkgrey;
+}
+
+.project-redirect {
+    color: black;
+    text-decoration: none;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#group-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contributor {
+    text-align: center;
+}
+
+.contributor-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+.contributor-desc {
+    font-size: 18px;
+}

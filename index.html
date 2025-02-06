@@ -6,16 +6,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/homepage.css">
         <title>Educazione Civica 2024/25</title>
     </head>
 
     <body>
-        <div align="center">
-        <h1 id="mid-title">Test</h1>
-        <p id="paragraf">sono una prova!!</p>
+        <div id="page-content">
+            <nav id="navbar">
+                <a href="#home">Home</a>
+                |
+                <a href="#projects-section">Projects</a>
+                |
+                <a href="#about">About</a>
+            </nav>
+
+            <div id="home">
+                <h1>Nome gruppo</h1>
+                <p>
+                    Bevenuto nel portfolio di educazione civica del gruppo NOMEGRUPPO!
+                    Qui puoi trovare tutti i progetti realizzati nell'anno scolastico 2024/2025!
+                    Vuoi sapere di più sul gruppo? Vai nella sezione about!
+                </p>
+            </div>
+
+            <div id="projects-section">
+                <h2>I nostri progetti</h2>
+                <div id="projects-container"></div>
+            </div>
+
+            <div id="about">
+                <h2>Il gruppo</h2>
+                <div id="group-container"></div>
+            </div>
         </div>
-        <script src="js/script.js"></script>
+
+        <script src="js/homepage.js"></script>
     </body>
 
 </html>
