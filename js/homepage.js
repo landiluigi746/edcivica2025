@@ -3,34 +3,12 @@ const groupContainer = document.getElementById("group-container");
 
 const projects = [
     {
-        name: "NHS vs SSN",
-        description: "In questo progetto siamo andati ad effettuare un'approfondita analisi e confronto tra il sistema sanitario nazionale inglese e quello italiano, mettendo in evidenza i punti di forza dell'uno e dell'altro e l'opinione della popolazione",
+        name: "SSN vs NHS",
+        subject: "Inglese",
+        date: "03/02/2025",
+        description: "In questo progetto, abbiamo condotto un'analisi approfondita e un confronto dettagliato tra il sistema sanitario nazionale inglese (NHS, National Health System) e quello italiano (SSN, Sistema Sanitario Nazionale), evidenziando i punti di forza di ciascun sistema in aspetti chiave come spese sanitarie, soddisfazione dei cittadini ed efficienza operativa. Abbiamo iniziato con una panoramica generale su entrambi i sistemi sanitari, su come questi vengono finanziati, i servizi che offrono e l'accessibilità. Successivamente abbiami analizzato dati specifici per mettere in luce le differenze significative, in particolare per quanto riguarda il costo dell'infrastruttura sanitaria e la soddisfazione generale della popolazione.",
         brief: "Approfondimento e confronto tra il sistema sanitario nazionale inglese e quello italiano",
-        embed: "https://www.canva.com/design/DAGeIqAfsyw/nNsGUHwrwED_2qHVltN0rQ/view?embed",
-        image: "projects/ssn_vs_nhs.png"
-    },
-
-    {
-        name: "prj italiano",
-        description: "E io che casio ne so che ancora lo dobbiamo fare?",
-        brief: "Un approfondimento su non lo so cosa ancora",
-        embed: "https://www.canva.com/design/DAGeIqAfsyw/nNsGUHwrwED_2qHVltN0rQ/view?embed",
-        image: "projects/ssn_vs_nhs.png"
-    },
-
-    {
-        name: "prova con un testo cocchino delle mie palle amare al sangue di carciofo secco prosecco di san crispino pane e vino",
-        description: "E io che casio ne so che ancora lo dobbiamo fare?",
-        brief: "Un approfondimento su non lo so cosa ancora",
-        embed: "https://www.canva.com/design/DAGeIqAfsyw/nNsGUHwrwED_2qHVltN0rQ/view?embed",
-        image: "projects/ssn_vs_nhs.png"
-    },
-
-    {
-        name: "example",
-        description: "E io che casio ne so che ancora lo dobbiamo fare?",
-        brief: "Un approfondimento su non lo so cosa ancora",
-        embed: "https://www.canva.com/design/DAGeIqAfsyw/nNsGUHwrwED_2qHVltN0rQ/view?embed",
+        embed: "https://www.canva.com/design/DAGeIqAfsyw/P5CCEEPxhCbbLSahmKyR6A/view?embed",
         image: "projects/ssn_vs_nhs.png"
     }
 ];
@@ -38,26 +16,26 @@ const projects = [
 const group = [
     {
         name: "Luigi Landi",
-        description: "bla bla bla",
-        image: "https://picsum.photos/200"
+        description: "Group coordinator, Website developer, Content writer",
+        github: "landiluigi746"
     },
 
     {
         name: "Francesco Gaeta",
-        description: "bla bla bla",
-        image: "https://picsum.photos/200"
+        description: "Graphic designer, Content writer",
+        github: "KeKK0z"
     },
 
     {
         name: "Nicolò Guariniello",
-        description: "bla bla bla",
-        image: "https://picsum.photos/200"
+        description: "Website developer",
+        github: "nicgua"
     },
 
     {
         name: "Christian Aiello",
-        description: "bla bla bla",
-        image: "https://picsum.photos/200"
+        description: "Content researcher",
+        github: "Chripolpo07"
     }
 ];
 
@@ -69,6 +47,7 @@ function loadProjects() {
         card.classList.add("project-card");
 
         redirect.href = "project.html";
+        redirect.target = "_blank";
         redirect.classList.add("project-redirect");
         
         redirect.innerHTML = `
@@ -91,15 +70,21 @@ function loadProjects() {
 function loadContacts() {
     group.forEach((contributor) => {
         const card = document.createElement("div");
+        const redirect = document.createElement("a");
+
+        redirect.href = `https://github.com/${contributor.github}`;
+        redirect.target = "_blank";
+        redirect.classList.add("contributor-link");
 
         card.classList.add("contributor");
 
-        card.innerHTML = `
-            <img class="contributor-img" src=${contributor.image}>
+        redirect.innerHTML = `
+            <img class="contributor-img" src="https://avatars.githubusercontent.com/${contributor.github}">
             <h3>${contributor.name}</h3>
             <p class="contributor-desc">${contributor.description}</p>
         `;
 
+        card.appendChild(redirect);
         groupContainer.appendChild(card);
     });
 }

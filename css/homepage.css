@@ -1,28 +1,29 @@
 /* */
 #navbar {
-    background-color: lightgray;
+    background-color: rgb(32, 32, 32);
     padding: 13px 0;
     position: sticky;
     top: 20px;
+    height: auto;
+    z-index: 1000;
     max-width: 50%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    text-align: center;
     border-radius: 20px;
     box-shadow: 3px 3px 6px 6px rgb(64, 64, 64);
+    color: white;
 }
 
 #navbar > a {
-    color: black;
+    color: white;
     margin: 0 10px;
     text-decoration: none;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 
 #navbar > a:hover {
-    color: blue;
     transform: scale(1.2);
+    font-size: 18px;
 }
 
 /* inizio miracoli divini */
@@ -31,8 +32,24 @@
 }
 
 #home {
+    max-width: fit-content;
+    margin: 0 auto;
     transform: scale(2.0);
     transition: transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#group-logo {
+    padding: 100px;
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+#group-desc {
+    max-width: 40%;
+    margin: 0 auto;
+    font-size: 20px;
 }
 
 #projects-container {
@@ -70,15 +87,73 @@
 }
 
 .contributor {
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
     text-align: center;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.contributor-link {
+    color: black;
+    text-decoration: none;
+}
+
+.contributor:hover {
+    box-shadow: 4px 4px 8px 8px lightgray;
 }
 
 .contributor-img {
     display: block;
     margin: 0 auto;
+    max-width: 150px;
     border-radius: 100px;
 }
 
 .contributor-desc {
     font-size: 18px;
+}
+
+@media screen and (max-width: 650px) {
+    #page-content {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    #home {
+        padding: 0;
+    }
+
+    #home > p {
+        margin: 0 auto;
+        max-width: 90%;
+        text-align: justify;
+    }
+
+    #navbar {
+        max-width: 100%;
+    }
+
+    #projects-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #group-container {
+        flex-direction: column;
+    }
+
+    .contributor {
+        margin: 6px auto;
+        padding: 6px;
+    }
+
+    .contributor-img {
+        max-width: 75px;
+        border-radius: 100px;
+    }
+
+    .contributor-desc {
+        font-size: 14px;
+    }
 }

@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     font-family: 'Open Sans';
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    background-color: rgb(249, 249, 249);
 }
 
 #page-content {
@@ -12,7 +20,8 @@
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 56px;
+    font-family: 'Montserrat';
 }
 
 h2 {
@@ -25,4 +34,79 @@ h3 {
 
 h1, h2, h3 {
     text-align: center;
+}
+
+.footer {
+    margin-top: 10%;
+    text-align: center;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer > p {
+    align-self: center;
+}
+
+.footer-school {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-link {
+    text-decoration: none;
+    margin: 10px 15px;
+    font-size: 16px;
+}
+
+.footer-logo {
+    width: 65px;
+}
+
+.footer-link > i {
+    font-size: 65px;
+}
+
+.footer-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-navbar > a {
+    color: black;
+    text-decoration: none;
+    margin: 5px 12px;
+    font-size: 16px;
+    font-family: 'Helvetica';
+}
+
+.footer-navbar > a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+    #page-content {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
 }

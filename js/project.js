@@ -1,5 +1,7 @@
 const title = document.getElementById("project-title");
 const description = document.getElementById("project-description");
+const subject = document.getElementById("project-subject");
+const date = document.getElementById("project-date");
 const projectContainer = document.getElementById("project-container");
 
 window.onload = () => {
@@ -8,6 +10,8 @@ window.onload = () => {
     document.title = data.name;
     title.innerText = data.name;
     description.innerText = data.description;
+    subject.innerText += data.subject;
+    date.innerText = data.date;
 
     if(data.embed) {
         const embedDiv = document.createElement("div");
