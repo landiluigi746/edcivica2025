@@ -1,12 +1,13 @@
 /* */
 #navbar {
+    display: block;
     background-color: rgb(32, 32, 32);
     padding: 13px 0;
     position: sticky;
     top: 20px;
     height: auto;
     z-index: 1000;
-    max-width: 50%;
+    max-width: 30%;
     margin: 0 auto;
     text-align: center;
     border-radius: 20px;
@@ -28,7 +29,7 @@
 
 /* inizio miracoli divini */
 #home, #projects-section, #about {
-    margin: 15% 0;
+    margin: 10% 0;
 }
 
 #home {
@@ -47,7 +48,7 @@
 }
 
 #group-desc {
-    max-width: 40%;
+    max-width: 60%;
     margin: 0 auto;
     font-size: 20px;
 }
