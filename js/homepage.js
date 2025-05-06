@@ -10,6 +10,16 @@ const projects = [
         brief: "Approfondimento e confronto tra il sistema sanitario nazionale inglese e quello italiano",
         embed: "https://www.canva.com/design/DAGeIqAfsyw/P5CCEEPxhCbbLSahmKyR6A/view?embed",
         image: "projects/ssn_vs_nhs.png"
+    },
+
+    {
+        name: "Salute e benessere",
+        subject: "Educazione Fisica",
+        date: "29/04/2025",
+        description: "In questo progetto abbiamo fatto una panoramica completa sul concetto di benessere, inteso non solo come assenza di malattia, ma come equilibrio tra corpo, mente, emozioni, ambiente e relazioni. Viene approfondito il ruolo di alimentazione, attività fisica, sonno, prevenzione medica e gestione delle dipendenze nel promuovere il benessere fisico e mentale. La presentazione sottolinea l’importanza di uno stile di vita sano, consapevole e sostenibile, che favorisca la soddisfazione personale e la qualità della vita nel lungo termine.",
+        brief: "Panoramica sul concetto di benessere a 360 gradi",
+        embed: "https://docs.google.com/presentation/d/e/2PACX-1vTxkQHkj_bDKNj71YMhZzq8aM1UaOPybz5-_UjDIjpVqf1UjovWM88DZhoBop9opg/pubembed?start=true&loop=true&delayms=60000",
+        image: "projects/benessere.png"
     }
 ];
 
